@@ -1,4 +1,4 @@
-package Numerical;
+package codelearn.Numerical;
 
 public class GreatestCommonPrimeDivisor {
     public static boolean[] array = new boolean[10001];
@@ -10,19 +10,19 @@ public class GreatestCommonPrimeDivisor {
     }
 
     public static void snt(int num) {
-        array[0] = array[1] = false;
+       array[0] = array[1] = false;
 
-        for (int i = 2; i <= num; i++) {
-            array[i] = true;
-        }
+       for (int i = 2; i <= num; i++) {
+           array[i] = true;
+       }
 
-        for (int i = 2; i <= Math.sqrt(num); i++) {
-            if (array[i]) {
-                for (int j = 2*i; j <= num; j += i) {
-                    array[j] = false;
-                }
-            }
-        }
+       for (int i = 2; i <= Math.sqrt(num); i++) {
+           if (array[i]) {
+               for (int j = 2 * i; j <= num; j += i) {
+                   array[j] = false;
+               }
+           }
+       }
     }
 
     public static int gcpd(int num1, int num2) {

@@ -1,4 +1,4 @@
-package Numerical;
+package codelearn.Numerical;
 
 public class FactorSum {
     public static void main(String[] args) {
